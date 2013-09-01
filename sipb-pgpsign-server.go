@@ -66,7 +66,7 @@ func main() {
 	}
 	mit_ca.AppendCertsFromPEM(mit_ca_pem)
 
-	skfile, err := os.Open("secret.gpg")
+	skfile, err := os.Open("secrets/signer.gpg")
 	defer skfile.Close()
 	if err != nil {
 		panic(err)
