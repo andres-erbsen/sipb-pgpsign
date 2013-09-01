@@ -175,7 +175,7 @@ func main() {
 				panic(err)
 			}
 
-			sigfile, err := os.Create(filename + "-" + fmt.Sprint(n_sign) + ".gpg")
+			sigfile, err := os.Create("log/" + filename + "-" + fmt.Sprint(n_sign) + ".gpg")
 			defer sigfile.Close()
 			if err != nil {
 				panic(err)
