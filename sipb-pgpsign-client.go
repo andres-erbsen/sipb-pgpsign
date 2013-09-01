@@ -2,20 +2,20 @@ package main
 
 import (
 	"code.google.com/p/go.crypto/openpgp"
-	"code.google.com/p/go.crypto/openpgp/packet"
 	"code.google.com/p/go.crypto/openpgp/armor"
+	"code.google.com/p/go.crypto/openpgp/packet"
 	"code.google.com/p/gopass"
 	"crypto"
+	_ "crypto/md5"
 	"crypto/rand"
 	"crypto/rsa"
-	_ "crypto/md5"
 	"crypto/x509"
 	"crypto/x509/pkix"
 	"encoding/asn1"
 	"encoding/base64"
 	"fmt"
-	"io/ioutil"
 	"io"
+	"io/ioutil"
 	"log"
 	"net"
 	"net/http"
@@ -43,6 +43,7 @@ type SignedPublicKeyAndChallenge struct {
 }
 
 var oidSignatureMD5WithRSA = asn1.ObjectIdentifier{1, 2, 840, 113549, 1, 1, 4}
+
 const ffx_useragent = "Mozilla/5.0 (X11; Linux x86_64; rv:23.0) Gecko/20100101 Firefox/23.0"
 
 func main() {
@@ -218,7 +219,7 @@ func main() {
 	rr, err = ioutil.ReadAll(resp.Body)
 	brr := base64.StdEncoding.EncodeToString(rr)
 	cert := "-----BEGIN CERTIFICATE-----\n"
-	for i:=0; i+76<=len(brr); i+=76 {
+	for i := 0; i+76 <= len(brr); i += 76 {
 		cert += brr[i:i+76] + "\n"
 	}
 	cert += brr[len(brr)-len(brr)%76:] + "\n"
