@@ -12,7 +12,7 @@ Everything `pgp.xvm.mit.edu` does or does not do is publicly logged at <http://p
 
 # Installation
 
-You will need the standard distribution `go` programming language (`golang`). Install the relevant package from your package manager and do the following:
+You will need the standard distribution of the `go` programming language (`golang`). Install the relevant package from your package manager and then do the following:
 
 	mkdir ~/go
 	export GOPATH=~/go
