@@ -10,9 +10,15 @@ MIT CA (<https://ca.mit.edu/ca/>) signs MIT users' public keys in x509 certifica
 
 Everything `pgp.xvm.mit.edu` does or does not do is publicly logged at <http://pgp.xvm.mit.edu:8000/>, allowing everyone to verify that we adhere to this policy. If you wish to do so, `sipb-pgpsign-server.go` should be suitable for this purpose if modified to not send emails to people.
 
-# Usage
+# Installation
 
-You will need the standard distribution `go` programming language (`golang`).
+You will need the standard distribution `go` programming language (`golang`). Install the relevant package from your package manager and do the following:
+
+	mkdir ~/go
+	export GOPATH=~/go
+	go get code.google.com/p/gopass code.google.com/p/go.crypto/openpgp
+
+# Usage
 
 	go run sipb-pgpsign-client.go
 
