@@ -8,7 +8,7 @@ MIT CA signs x509 public MIT users' keys in x509 certificate format.
 - the name on the UID matches the name on MIT records
 - the person is a student (otherwise MIT might not have checked their identity throughly)
 
-Everything `pgp.xvm.mit.edu` does or does not do is publicly logged at >http://pgp.xvm.mit.edu:8000/>, allowing everyone to verify that we adhere to this policy.
+Everything `pgp.xvm.mit.edu` does or does not do is publicly logged at <http://pgp.xvm.mit.edu:8000/>, allowing everyone to verify that we adhere to this policy.
 
 # Usage
 
