@@ -1,0 +1,13 @@
+HTTP/1.1 301 Moved Permanently
+Location: https://github.com/andres-erbsen/sipb-pgpsign
+Content-Type: text/html
+Content-Length: 200
+ 
+<html>
+<head>
+<title>At github</title>
+</head>
+<body>
+<p>This page is at <a href="https://github.com/andres-erbsen/sipb-pgpsign">https://github.com/andres-erbsen/sipb-pgpsign</a>.</p>
+</body>
+</html>
