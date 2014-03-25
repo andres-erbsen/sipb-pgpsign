@@ -1,0 +1,11 @@
+[Unit]
+Description=MIT SIPB automatic PGP key signer
+After=network.target
+ 
+[Service]
+WorkingDirectory=/home/autopgp
+ExecStart=/usr/bin/envuidgid autopgp /usr/bin/softlimit -o20 -d50000 /usr/bin/tcpserver -vDRHl0 -b50 -c100 0 7564 /home/autopgp/sipb-pgpsign-server
+ 
+[Install]
+WantedBy=multi-user.target
+

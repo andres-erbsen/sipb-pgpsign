@@ -66,12 +66,12 @@ func main() {
 	}
 	mit_ca.AppendCertsFromPEM(mit_ca_pem)
 
-	skfile, err := os.Open("secrets/signer.gpg")
+	skfile, err := os.Open("/keys/autopgp.gpg")
 	defer skfile.Close()
 	if err != nil {
 		panic(err)
 	}
-	our_elist, err := openpgp.ReadArmoredKeyRing(skfile)
+	our_elist, err := openpgp.ReadKeyRing(skfile)
 	if err != nil || len(our_elist) != 1 {
 		panic(err)
 	}
@@ -185,7 +185,7 @@ func main() {
 			if err != nil {
 				panic(err)
 			}
-			c.Mail("pgp-autosign@mit.edu")
+			c.Mail("autopgp@mit.edu")
 			c.Rcpt(rmail)
 			mailwriter, err := c.Data()
 			if err != nil {

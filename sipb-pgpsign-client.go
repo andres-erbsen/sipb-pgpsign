@@ -226,8 +226,8 @@ func main() {
 	cert += "-----END CERTIFICATE-----\n\n"
 	fmt.Print(cert)
 
-	// pgp.xvm.mit.edu round 1/1: submit the cert and key
-	addr, err := net.ResolveTCPAddr("tcp", "pgp.xvm.mit.edu:7564")
+	// autopgp.mit.edu round 1/1: submit the cert and key
+	addr, err := net.ResolveTCPAddr("tcp", "autopgp.xvm.mit.edu:7564")
 	if err != nil {
 		log.Fatalln(err)
 	}
