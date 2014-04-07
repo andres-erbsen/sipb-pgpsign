@@ -227,7 +227,7 @@ func main() {
 	fmt.Print(cert)
 
 	// autopgp.mit.edu round 1/1: submit the cert and key
-	addr, err := net.ResolveTCPAddr("tcp", "autopgp.xvm.mit.edu:7564")
+	addr, err := net.ResolveTCPAddr("tcp", "18.181.0.83:7564")
 	if err != nil {
 		log.Fatalln(err)
 	}
